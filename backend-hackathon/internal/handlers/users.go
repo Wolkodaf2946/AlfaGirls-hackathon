@@ -3,7 +3,7 @@ package handlers
 import (
 	"fmt"
 	"net/http"
-	"strconv"
+	//"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -20,13 +20,13 @@ func (h *Handler) getAllUsers(c *gin.Context) {
 
 }
 
-func (h *Handler) getUserById(c *gin.Context) {
-	const op = "handlers.getUserById"
-	param := c.Query("id")
-	id, err := strconv.ParseInt(param,10,64)
-	if err != nil {
-		newErrorResponse(c, h.logger, http.StatusBadRequest, fmt.Sprintf("%s : %s (invalid url)", op, err), "invalid url")
-		return
-	}
-	user, err := h.services.UserOperations.GetUserById(id)
-}
+// func (h *Handler) getUserById(c *gin.Context) {
+// 	const op = "handlers.getUserById"
+// 	param := c.Query("id")
+// 	id, err := strconv.ParseInt(param,10,64)
+// 	if err != nil {
+// 		newErrorResponse(c, h.logger, http.StatusBadRequest, fmt.Sprintf("%s : %s (invalid url)", op, err), "invalid url")
+// 		return
+// 	}
+// 	user, err := h.services.UserOperations.GetUserById(id)
+// }

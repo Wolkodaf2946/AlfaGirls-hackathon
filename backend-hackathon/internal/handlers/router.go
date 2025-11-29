@@ -44,7 +44,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	user := router.Group("/user/", h.userIdentity)
 	{
 		user.GET("/allUsers/", h.getAllUsers)
-		user.GET("/user/userByID", h.getUserById)
+		//user.GET("/user/userByID", h.getUserById)
 		//user.POST("/all/")
 	}
 
