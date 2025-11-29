@@ -14,7 +14,7 @@ import (
 
 type Authorization interface {
 	CreateUser(ctx context.Context, user models.UserSignUp) (int, error)
-	GenerateToken(ctx context.Context, username, password string) (int64, tokenManager.Tokens, error)
+	GenerateToken(ctx context.Context, username, password string) (int64, bool, tokenManager.Tokens, error)
 }
 
 type UserOperations interface {
