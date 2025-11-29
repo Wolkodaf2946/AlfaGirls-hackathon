@@ -59,7 +59,7 @@ func (h *Handler) signIn(c *gin.Context) {
 		return
 	}
 
-	tokens, err := h.services.Authorization.GenerateToken(c.Request.Context(), input.FullName, input.Password)
+	userId, tokens, err := h.services.Authorization.GenerateToken(c.Request.Context(), input.FullName, input.Password)
 	if err != nil {
 		if err.Error() == "Error getting user: Incorrect user data entered" {
 			newErrorResponse(c, h.logger, http.StatusUnauthorized, fmt.Sprintf("%s : %s", op, err.Error()), err.Error())
@@ -71,6 +71,7 @@ func (h *Handler) signIn(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"access_token": tokens.AccessToken,
+		"id": userId,
 	})
 
 }

@@ -35,7 +35,7 @@ type UserSignIn struct {
 }
 
 type UserShortly struct {
-	Id       int64  `json:"id"`
-	FullName string `json:"full_name"`
-	Email    string `json:"email"`
+	Id       int64  `json:"id" db:"id"`
+	FullName string `json:"full_name" db:"full_name"`
+	Email    string `json:"email" db:"email"`
 }

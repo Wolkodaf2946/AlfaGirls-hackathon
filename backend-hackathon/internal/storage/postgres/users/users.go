@@ -2,8 +2,10 @@ package users
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log/slog"
+	"os"
 
 	"git.wolkodaf2946.ru/Wolkodaf/congress-hackathon/internal/storage/postgres"
 	"git.wolkodaf2946.ru/Wolkodaf/congress-hackathon/models"
@@ -28,4 +30,19 @@ func (s *UserPostgres) GetAllUsers(ctx context.Context) ([]models.UserShortly, e
 		return []models.UserShortly{}, fmt.Errorf("%s : %s",op,err.Error())
 	}
 	return users, nil
+}
+
+func (s *UserPostgres) GetUserById(ctx context.Context, userId int64) (json.RawMessage, error) {
+	const op = "storage.postgres.users.GetUserById"
+	var user json.RawMessage
+	queryBytes, err := os.ReadFile("get_user.sql")
+	if err != nil {
+		return json.RawMessage{}, fmt.Errorf("%s : %s",op, err.Error())
+	}
+	querySQL := string(queryBytes)
+	row := s.db.QueryRowContext(ctx, querySQL, userId)
+	if err := row.Scan(&user); err != nil {
+		return json.RawMessage{}, fmt.Errorf("%s : %s",op, err.Error())
+	}
+	return user, nil
 }
