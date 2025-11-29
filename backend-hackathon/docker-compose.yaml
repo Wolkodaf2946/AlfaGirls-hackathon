@@ -1,13 +1,13 @@
 services:
   backend:
-    container_name: #tgbot...
+    container_name: smart-grant-backend
     build: ./
     environment:
-      DB_HOST: #db
-      DB_PORT: #5432
-      DB_USER: #wolkodaf
-      DB_PASSWORD: #${DB_PASSWORD}
-      DB_NAME: #sleep-diary-db
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: postgres
     depends_on:
       db:
         condition: service_healthy
@@ -15,7 +15,7 @@ services:
 
   db:
     image: 'postgres:17.6'
-    container_name: sd-db
+    container_name: smart-grant-DB
     environment:
       POSTGRES_USER: wolkodaf
       POSTGRES_PASSWORD: ${DB_PASSWORD}
