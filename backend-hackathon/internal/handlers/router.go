@@ -26,7 +26,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	router.RedirectTrailingSlash = false
 
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:5174"}
+	config.AllowOrigins = []string{"http://localhost:5173"}
 	config.AllowMethods = []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"}
 	config.AllowHeaders = []string{"Origin", "Content-Type", "Authorization"}
 	config.ExposeHeaders = []string{"Content-Length"}

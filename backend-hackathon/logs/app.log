@@ -128,3 +128,4 @@ time=2025-11-29T11:26:04.522+03:00 level=INFO msg="App Started"
 time=2025-11-29T11:26:30.294+03:00 level=ERROR msg="handlers.signUp : storage.postgres.auth.CreateUser : pq: duplicate key value violates unique constraint \"users_email_key\"" level=500
 time=2025-11-29T11:27:03.780+03:00 level=INFO msg="App Shutting Down"
 time=2025-11-29T11:27:03.780+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:49:27.445+03:00 level=INFO msg="App Started"
