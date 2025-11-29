@@ -2,4 +2,4 @@ Makefile
 .env
 local.yaml
 pgdata
-logs/*.log
+./logs/app.log
