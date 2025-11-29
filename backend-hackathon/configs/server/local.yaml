@@ -1,0 +1,7 @@
+env: "local"
+port: '8080'
+
+dbport: '5432'
+sslmode: 'disable'
+logs-path: 'logs/app.log'
+migrate-path: './migrations'
