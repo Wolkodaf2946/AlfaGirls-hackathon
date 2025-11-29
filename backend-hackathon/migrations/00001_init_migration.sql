@@ -32,7 +32,7 @@ CREATE TABLE categories (
 CREATE TABLE grants (
     id SERIAL PRIMARY KEY,
     grantor_id INT REFERENCES users(id),
-    granter_id INT REFERENCES users(idё),
+    granter_id INT REFERENCES users(id),
     grant_name TEXT NOT NULL,
     
     total_amount DECIMAL(18, 2) NOT NULL,

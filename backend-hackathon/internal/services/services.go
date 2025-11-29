@@ -2,6 +2,7 @@ package services
 
 import (
 	"context"
+	"encoding/json"
 	"log/slog"
 
 	auth "git.wolkodaf2946.ru/Wolkodaf/congress-hackathon/internal/services/auth"
@@ -13,11 +14,12 @@ import (
 
 type Authorization interface {
 	CreateUser(ctx context.Context, user models.UserSignUp) (int, error)
-	GenerateToken(ctx context.Context, username, password string) (tokenManager.Tokens, error)
+	GenerateToken(ctx context.Context, username, password string) (int64, tokenManager.Tokens, error)
 }
 
 type UserOperations interface {
 	GetAllUsers(ctx context.Context) ([]models.UserShortly, error)
+	GetUserById(ctx context.Context, userId int64) (json.RawMessage, error)
 }
 
 

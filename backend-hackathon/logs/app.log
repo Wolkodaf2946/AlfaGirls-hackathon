@@ -73,3 +73,58 @@ time=2025-11-29T07:49:45.205+03:00 level=INFO msg="App Started"
 time=2025-11-29T07:50:44.591+03:00 level=ERROR msg="handlers.signUp : storage.postgres.auth.CreateUser : pq: relation \"users\" does not exist" level=500
 time=2025-11-29T07:50:51.493+03:00 level=INFO msg="App Shutting Down"
 time=2025-11-29T07:50:51.493+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T10:51:31.576+03:00 level=INFO msg="App Started"
+time=2025-11-29T10:52:13.726+03:00 level=ERROR msg="handlers.signIn : error getting user: incorrect user data entered" level=500
+time=2025-11-29T10:52:21.273+03:00 level=ERROR msg="handlers.signIn : error getting user: incorrect user data entered" level=500
+time=2025-11-29T10:54:47.309+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T10:54:47.309+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T10:54:48.708+03:00 level=INFO msg="App Started"
+time=2025-11-29T10:54:54.307+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T10:54:54.307+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T10:54:55.639+03:00 level=INFO msg="App Started"
+time=2025-11-29T10:55:28.075+03:00 level=ERROR msg="handlers.getAllUsers : storage.postgres.users.GetAllUsers : missing destination name full_name in *[]models.UserShortly" level=500
+time=2025-11-29T10:57:06.899+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T10:57:06.899+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T10:57:10.968+03:00 level=INFO msg="App Started"
+time=2025-11-29T10:57:14.240+03:00 level=ERROR msg="handlers.getAllUsers : storage.postgres.users.GetAllUsers : missing destination name email in *[]models.UserShortly" level=500
+time=2025-11-29T10:57:26.933+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T10:57:26.933+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T10:57:28.725+03:00 level=INFO msg="App Started"
+time=2025-11-29T10:58:36.613+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T10:58:36.614+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T10:58:39.796+03:00 level=INFO msg="App Started"
+time=2025-11-29T10:58:42.870+03:00 level=ERROR msg="handlers.getUserById : strconv.ParseInt: parsing \"2/\": invalid syntax (invalid url)" level=400
+time=2025-11-29T11:00:35.098+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:00:35.098+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:00:36.469+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:00:40.040+03:00 level=ERROR msg="handlers.getUserById : strconv.Atoi: parsing \"2/\": invalid syntax (invalid url)" level=400
+time=2025-11-29T11:01:02.728+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:01:02.728+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:01:04.175+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:01:17.124+03:00 level=INFO msg=2/
+time=2025-11-29T11:01:17.124+03:00 level=ERROR msg="handlers.getUserById : strconv.Atoi: parsing \"2/\": invalid syntax (invalid url)" level=400
+time=2025-11-29T11:01:37.211+03:00 level=INFO msg=2/
+time=2025-11-29T11:01:37.211+03:00 level=ERROR msg="handlers.getUserById : strconv.Atoi: parsing \"2/\": invalid syntax (invalid url)" level=400
+time=2025-11-29T11:11:18.074+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:11:18.075+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:11:19.377+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:11:22.118+03:00 level=INFO msg=2/
+time=2025-11-29T11:11:22.118+03:00 level=ERROR msg="handlers.getUserById : strconv.ParseInt: parsing \"2/\": invalid syntax (invalid url)" level=400
+time=2025-11-29T11:11:52.113+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:11:52.114+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:14:44.869+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:14:48.692+03:00 level=ERROR msg="handlers.getUserById : strconv.ParseInt: parsing \"2/\": invalid syntax (invalid url)" level=400
+time=2025-11-29T11:15:30.473+03:00 level=ERROR msg="handlers.getUserById : storage.postgres.users.GetUserById : open get_user.sql: no such file or directory" level=500
+time=2025-11-29T11:16:16.040+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:16:16.040+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:16:17.104+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:16:21.162+03:00 level=ERROR msg="handlers.getUserById : storage.postgres.users.GetUserById : pq: got 1 parameters but the statement requires 0" level=500
+time=2025-11-29T11:18:28.482+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:18:28.482+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:18:29.496+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:26:02.482+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:26:02.482+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T11:26:04.522+03:00 level=INFO msg="App Started"
+time=2025-11-29T11:26:30.294+03:00 level=ERROR msg="handlers.signUp : storage.postgres.auth.CreateUser : pq: duplicate key value violates unique constraint \"users_email_key\"" level=500
+time=2025-11-29T11:27:03.780+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T11:27:03.780+03:00 level=INFO msg="Gracefully stopped"

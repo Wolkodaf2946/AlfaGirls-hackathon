@@ -39,17 +39,17 @@ func (s *AuthService) CreateUser(ctx context.Context, user models.UserSignUp) (i
 
 //----
 
-func (s *AuthService) GenerateToken(ctx context.Context, username, password string) (tokenManager.Tokens, error) {
+func (s *AuthService) GenerateToken(ctx context.Context, username, password string) (int64, tokenManager.Tokens, error) {
 	const op = "services.auth.GenerateToken"
 	userId, isAdmin, err := s.store.GetUser(ctx, username, generatePasswordHash(password))
 	if err != nil {
-		return tokenManager.Tokens{}, fmt.Errorf("error getting user: incorrect user data entered")
+		return -1, tokenManager.Tokens{}, fmt.Errorf("error getting user: incorrect user data entered")
 	}
 	access, err := s.manager.NewJWT(userId, isAdmin, accessTokenTTL)
 	if err != nil {
-		return tokenManager.Tokens{}, fmt.Errorf("%s : %w",op,err)
+		return -1, tokenManager.Tokens{}, fmt.Errorf("%s : %w",op,err)
 	}
-	return tokenManager.Tokens{AccessToken: access}, nil
+	return userId, tokenManager.Tokens{AccessToken: access}, nil
 }
 
 //----

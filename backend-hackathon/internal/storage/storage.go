@@ -4,6 +4,7 @@ import (
 	//"context"
 
 	"context"
+	"encoding/json"
 	"log/slog"
 
 	auth "git.wolkodaf2946.ru/Wolkodaf/congress-hackathon/internal/storage/postgres/auth"
@@ -19,6 +20,7 @@ type Authorization interface {
 
 type UserOperations interface {
 	GetAllUsers(ctx context.Context) ([]models.UserShortly, error)
+	GetUserById(ctx context.Context, userId int64) (json.RawMessage, error)
 }
 
 type Storage struct{
