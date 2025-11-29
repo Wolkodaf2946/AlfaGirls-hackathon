@@ -66,3 +66,10 @@ time=2025-11-29T04:12:31.577+03:00 level=ERROR msg="handlers.signIn : error gett
 time=2025-11-29T04:12:41.554+03:00 level=ERROR msg="handlers.signUp : storage.postgres.auth.CreateUser : pq: duplicate key value violates unique constraint \"users_email_key\"" level=500
 time=2025-11-29T05:38:55.425+03:00 level=INFO msg="App Shutting Down"
 time=2025-11-29T05:38:55.425+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T07:49:11.655+03:00 level=INFO msg="App Started"
+time=2025-11-29T07:49:29.930+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T07:49:29.931+03:00 level=INFO msg="Gracefully stopped"
+time=2025-11-29T07:49:45.205+03:00 level=INFO msg="App Started"
+time=2025-11-29T07:50:44.591+03:00 level=ERROR msg="handlers.signUp : storage.postgres.auth.CreateUser : pq: relation \"users\" does not exist" level=500
+time=2025-11-29T07:50:51.493+03:00 level=INFO msg="App Shutting Down"
+time=2025-11-29T07:50:51.493+03:00 level=INFO msg="Gracefully stopped"
