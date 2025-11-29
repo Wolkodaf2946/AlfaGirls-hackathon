@@ -3,7 +3,11 @@ FROM golang:1.25 AS builder
 WORKDIR /app
 
 COPY go.mod go.sum ./
+<<<<<<< HEAD
 RUN GOPROXY="direct" go mod download
+=======
+RUN go mod download
+>>>>>>> a0964e011ee9ffa3c72746d8c53d34f7d164edb9
 COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o server ./cmd/app
